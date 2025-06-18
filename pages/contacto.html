@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>arroyo blanco - contacto</title>
+        <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    </head>
+<body>
+    <header>
+<!-- logo y titulo -->
+<!-- rutas  ./ se genera un desplegable donde puedo seleccionar la carpeta y archivo -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <a href="../index.html">
+        <img src="../assets/logo.png" alt="Logo Arroyo Blanco" class="logo">
+    </a>
+
+    <nav class="menu">
+        <ul>
+        <li><a href="../pages/tienda.html">Tienda</a></li>
+        <li><a href="../pages/galeria.html">Galería</a></li>
+        <li><a href="../pages/recetas.html">Recetas</a></li>
+        <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+<main class="contenedor">
+    <section class="formulario">
+    <form>
+        <label>Nombre</label>
+        <input type="text" placeholder="Nombre">
+
+        <label>Apellido</label>
+        <input type="text" placeholder="Apellido">
+
+        <label>Mail de contacto</label>
+        <input type="email" placeholder="nombre@sumail.com">
+
+        <label>Teléfono de contacto</label>
+        <input type="number">
+
+        <label>Escriba su mensaje</label>
+        <input type="text" placeholder="Escriba su mensaje aquí">
+
+        <label>¿Qué medio prefiere para que nos comuniquemos?</label>
+        <select>
+            <option>Mail</option>
+            <option>Teléfono</option>
+            <option>Whatsapp</option>
+        </select>
+    </form>
+    </section>
+
+    <section class="mapa">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.049052490967!2d-71.49731682401398!3d-43.008100771137235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbcf08b55d0904b59%3A0x3a2f4748ac8c5469!2sTrevelin%2C%20Chubut!5e0!3m2!1ses-419!2sar!4v1715878982341!5m2!1ses-419!2sar" 
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+</main>
+    <footer>
+        <section class="footer-content">
+            <section class="footer-left">
+            <a href="https://www.facebook.com/people/Vermut-Arroyo-Blanco"><img src="../assets/facebook.png"></a>
+            <a href="https://www.instagram.com/vermut.arroyoblanco/"> <img src="../assets/instagram.png"></a>
+            <a href="https://x.com/home"><img src="../assets/gorjeo.png"></a>
+            </section>
+            <section class="footer-center">Creado por MANU</section>
+            <section class="footer-right">© Derechos reservados</section>
+        </section>
+    </footer>
+        <!-- icono de whatsapp -->
+    <a href="https://wa.me/5492945405859" class="boton-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

@@ -1,0 +1,462 @@
+/* si ponemos un "*" adelande del {, este se aplica a toda la pagina
+se pueden usar los selectores de ETIQUETA, de CLASE o ID
+posiciones,  */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+header {
+    top: 0;
+    left: 0;
+    height: 70px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-family: roboto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+/* LOGO DE WEB */
+.logo {
+    height: 50px;
+}
+/* MENU */
+.menu ul {
+    font-family: roboto;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    background-color: white;
+    font-family: roboto;
+}
+
+.menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.menu ul li a.active {
+    background-color: #b3d4fc;
+    border-color: #7ab8f5;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+#menu-toggle {
+    display: none;
+}
+
+/* Ícono hamburguesa */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Estilo base del menú */
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    overflow-x: auto; 
+}
+
+.menu ul {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Estilo para las imágenes dentro de los artículos */
+section article img {
+    display: block;
+    margin: 0 auto;
+    width:50%;
+    height: auto;
+}
+
+/* Alineación de los artículos */
+section {
+    display: flex;
+    font-family: roboto;
+    font-size: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* padding-bottom: 50px; */
+}
+
+article {
+    flex: 1 1 200px; 
+    max-width: 300px;
+    text-align: center;
+}
+
+
+.banner {
+    width: 100%;       
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    position: center;
+    padding-bottom:20px ;
+
+}
+
+/*icono whatsapp*/
+.boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #082d26;
+    padding: 12px 12px;
+    border-radius: 100px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    z-index: 9999; 
+}
+.fab {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+
+/* formulario */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 30px;
+    gap: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+.formulario {
+    flex: 1 1 300px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.mapa {
+    flex: 1 1 400px;
+}
+
+
+/* GALERIA */
+.galeria-contenedor {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagen-grande img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.galeria-pequena {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    align-content: start;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/*TIENDA*/
+.grilla-tienda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tienda {
+    position: relative;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.tienda img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn-carrito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #082d26;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.btn-carrito:hover {
+    opacity: 1;
+}
+
+.titulo {
+    margin: 10px 0 5px;
+    font-size: 12px;
+}
+
+.descripcion {
+    font-size: 10px;
+    color: #444;
+}
+
+h1 {
+    width: 100%;
+    background-color: #082d26; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    margin: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/*RECETAS*/
+
+h1 {
+    background-color: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 30px;
+}
+
+.recetas-grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.receta {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.receta:hover {
+    transform: scale(1.02);
+}
+
+.receta img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.receta h2 {
+    margin: 10px;
+    color: #8b0000;
+    font-size: 20px;
+}
+
+.receta p {
+    margin: 0 15px 20px;
+    font-size: 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Responsive: móvil */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: block;
+    }
+}
+/* media galeria */
+@media (max-width: 768px) {
+.galeria-contenedor {
+    flex-direction: column;
+    align-items: center;
+}
+}
+/* media tienda */
+@media ( max-width: 760px) {
+.grilla-tienda {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+}
+@media ( max-width: 300px) {
+.grilla-tienda {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+}
+
+/* media recetas */
+@media ( max-width: 760px) {
+.recetas-grilla  {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+}
+@media ( max-width: 450px) {
+.recetas-grilla  {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+}
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+  /* Estilo para los íconos de redes */
+.footer-left img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
