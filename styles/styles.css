@@ -24,93 +24,45 @@ header {
     height: 50px;
 }
 /* MENU */
-.menu ul {
-    font-family: roboto;
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  color: black !important;
 }
 
-.menu ul li a {
-    display: block;
-    padding: 8px 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-    background-color: white;
-    font-family: roboto;
-}
-
-.menu ul li a:hover {
-    background-color: #f0f0f0;
-}
-
-.menu ul li a.active {
-    background-color: #b3d4fc;
-    border-color: #7ab8f5;
-}
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-#menu-toggle {
-    display: none;
-}
-
-/* Ícono hamburguesa */
-.menu-icon {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Estilo base del menú */
-.menu {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    overflow-x: auto; 
-}
-
-.menu ul {
-    display: flex;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.nav-link:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }
 
 
 /* Estilo para las imágenes dentro de los artículos */
-section article img {
-    display: block;
-    margin: 0 auto;
-    width:50%;
-    height: auto;
-}
-
-/* Alineación de los artículos */
 section {
-    display: flex;
-    font-family: roboto;
-    font-size: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    /* padding-bottom: 50px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
 }
 
-article {
-    flex: 1 1 200px; 
-    max-width: 300px;
-    text-align: center;
+.tarjeta {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta img {
+  height: 160px;       
+  object-fit: contain;
+  margin-bottom: 10px;
+  padding: auto;
+}
+
+.tarjeta p {
+  text-align: center;
 }
 
 
@@ -152,7 +104,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
-    padding: 30px;
+    padding: 30px 50px  100px;
     gap: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -188,7 +140,9 @@ input, select {
 /* GALERIA */
 .galeria-contenedor {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
   gap: 1rem;
   padding: 1rem;
   width: 100%;
@@ -198,6 +152,9 @@ input, select {
 
 .imagen-grande img {
   width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -236,10 +193,9 @@ input, select {
   }
 }
 
-/* MÓVIL: stack y 1 columna pequeña */
 @media (max-width: 768px) {
   .galeria-contenedor {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr auto;
   }
 
   .galeria-pequena {
@@ -257,7 +213,7 @@ input, select {
     padding: 20px;
 }
 
-.tienda {
+.card {
     position: relative;
     text-align: center;
     border: 1px solid #ccc;
@@ -266,37 +222,51 @@ input, select {
     border-radius: 8px;
 }
 
-.tienda img {
+.card__imagen {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.btn-carrito {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #082d26;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 10px;
-    opacity: 0.8;
-    transition: 0.3s;
+.card__boton {
+  display: block;             
+  width: 100%;               
+  background-color: #082d26;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0.9;
+  transition: 0.3s;
+  margin-top: 10px; 
+}
+.card__boton--agotado {
+  display: block;             
+  width: 100%;               
+  background-color: #a8a8a8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0.9;
+  transition: 0.3s;
+  margin-top: 10px; 
 }
 
-.btn-carrito:hover {
+.card__boton:hover {
     opacity: 1;
 }
 
-.titulo {
+.card__titulo {
     margin: 10px 0 5px;
     font-size: 12px;
 }
 
-.descripcion {
+.card__texto {
     font-size: 10px;
     color: #444;
 }
@@ -315,6 +285,19 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+.titulo-tienda {
+    width: 100%;
+    background-color: #082d26; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    margin: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 /*RECETAS*/
 
 h1 {
@@ -411,14 +394,13 @@ h1 {
 .grilla-tienda {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    
-}
+    }
 }
 @media ( max-width: 300px) {
 .grilla-tienda {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-}
+    }
 }
 
 /* media recetas */
@@ -436,7 +418,7 @@ h1 {
 }
 /* footer */
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: white;

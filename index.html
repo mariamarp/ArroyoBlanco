@@ -7,87 +7,115 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css"> <!-- Ajustar ruta si es necesario -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
 
     <header>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <a href="./index.html"><img src="./assets/logo.png" alt="Logo Arroyo Blanco" class="logo"></a>
+         <a href="./index.html"><img src="./assets/logo.png" alt="Logo Arroyo Blanco" class="logo"></a>
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <nav class="menu">
-            <ul> <!-- ul lista desordenada-->
-                <li><a href="./pages/tienda.html">Tienda</a></li>
-                <li><a href="./pages/galeria.html">Galería</a></li>
-                <li><a href="./pages/recetas.html">Recetas</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="btn btn-outline-dark mx-1" href="./pages/tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="btn btn-outline-dark mx-1" href="./pages/galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="btn btn-outline-dark mx-1" href="./pages/recetas.html">Recetas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="btn btn-outline-dark mx-1" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main>
+<!-- carrusel -->
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/baner2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/banner1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/baner3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
-<!-- imagenes categoria -->
-        <nav class="banner">
-                <img src="./assets/baner3.jpg" alt="banner">
-        </nav>    
+<section class="container py-5">
+  <div class="row justify-content-center gy-4">
+    
+    <div class="col-md-4">
+      <div class="card h-100 shadow rounded-4 text-center p-3">
+        <img src="./assets/ARROYO BLANCO iconos-07.png" alt="foto de vermut rosso" class="card-img-top mx-auto" style="height:160px; width:auto; object-fit:contain;">
+        <div class="card-body">
+          <p class="card-text texto_index">
+            Lo que distingue a nuestro vermut Rosso son sus ingredientes y la forma en que los tratamos: sin agua añadida, sin colorantes, sin azúcar refinado.<br>
+            Solo vino, mosto de uva, manzanas y zarzamoras del Valle de Trevelin.<br>
+            Su dulzura nace de la fruta. <br>
+            Te merecés un vermut honesto.<br>
+            Un vermut Arroyo Blanco.
+          </p>
+        </div>
+      </div>
+    </div>
 
-        <section class="contenedor">
-            <article class="imagen">
-                <img src="./assets/ARROYO BLANCO iconos-07.png" alt="foto de vermut rosso">
-                <!-- <img src="./assets/vermutrosso.png" alt="titulo de vermut rosso" class="titulopng"> -->
-                <!--<h2 class="titulo">VERMUT ROSSO</h2>-->
-                <p>Lo que distingue a nuestro vermut Rosso son sus ingredientes y la forma en que los tratamos: sin agua añadida, sin colorantes, sin azúcar refinado.
-                    <br>
-                    Solo vino, un toque extra de mosto de uva, manzanas y zarzamoras (boysenberries) del Valle de Trevelin, junto a una selección precisa de hierbas nativas y tradicionales, elaborado en pequeños lotes para preservar su esencia.
-                    <br>
-                    La intensidad de su carácter no surge de atajos, sino de una elaboración honesta.
-                    <br>
-                    Su dulzura balanceada y su color vibrante nacen de las frutas, no de endulzantes ni correcciones artificiales.
-                    <br>
-                    Te merecés un vermut honesto.
-                    <br>
-                    Un vermut Arroyo Blanco.
-                    <br>
-                    Seguinos en redes y descubrí cómo disfrutarlo en tragos que estén a su altura.
-                </p>
-            </article>
+    <div class="col-md-4">
+      <div class="card h-100 shadow rounded-4 text-center p-3">
+        <img src="./assets/ARROYO BLANCO iconos-06.png" alt="foto de vermut blanco" class="card-img-top mx-auto" style="height:160px; width:auto; object-fit:contain;">
+        <div class="card-body">
+          <p class="card-text texto_index">
+            Hay una forma de hacer vermut sin atajos: vino Torrontés, mosto de uva y manzanas del Valle de Trevelin.<br>
+            Sin azúcar refinado, sin colorantes ni agua añadida.<br>
+            Elaborado con respeto. <br>
+            Te merecés un vermut honesto.<br>
+            Un vermut Arroyo Blanco.
+          </p>
+        </div>
+      </div>
+    </div>
 
-            <article>
-                <img src="./assets/ARROYO BLANCO iconos-06.png" alt="foto de vermut blanco">
-                <!-- <img src="./assets/vermutblanco.png" alt="titulo de vermut blanco" class="titulopng"> -->
-                <!--<h2 class="titulo">VERMUT BLANCO</h2>-->
-                <p>Hay una forma de hacer vermut sin atajos.
-                    <br>
-                    Usamos vino Torrontés, mosto de uva y manzanas del Valle de Trevelin, sin azúcar refinado, sin colorantes, sin una gota de agua añadida.
-                    Elaboramos en pequeños lotes, cuidando cada paso, porque el respeto por los ingredientes también se bebe.
-                    La intensidad no se impone, se logra con honestidad.
-                    <br>
-                    Y por eso alcanza con menos, para disfrutar más.
-                    <br>
-                    Te merecés un vermut honesto.
-                    <br>
-                    Un vermut Arroyo Blanco.
-                    <br>
-                    Seguinos en redes y encontrá recetas que estén a su altura.
-                </p>
-            </article>
+    <div class="col-md-4">
+      <div class="card h-100 shadow rounded-4 text-center p-3">
+        <img src="./assets/ARROYO BLANCO iconos-05.png" alt="foto de vermut rojo" class="card-img-top mx-auto" style="height:160px; width:auto; object-fit:contain;">
+        <div class="card-body">
+          <p class="card-text texto_index">
+            Lo que hace únicos a nuestros vermuts es cómo tratamos los ingredientes: vino Malbec, mosto, cerezas y hierbas nativas.<br>
+            Sin agua, sin azúcar refinado.<br>
+            Elaboración honesta.<br>
+            Te merecés un vermut honesto.<br>
+            Un vermut Arroyo Blanco.
+          </p>
+        </div>
+      </div>
+    </div>
 
-            <article>
-                <img src="./assets/ARROYO BLANCO iconos-05.png" alt="foto de vermut rojo">
-                <!-- <img src="./assets/vermutrojo.png" alt="titulo de vermut rojo" class="titulopng"> -->
-                <!--<h2 class="titulo">VERMUT ROJO</h2>-->
-                <p>Lo que hace únicos a nuestros vermuts son sus ingredientes y cómo los tratamos: sin agua añadida, sin colorantes ni azúcar refinado. Solo vino Malbec, mosto de uva, cerezas del Valle de Trevelin y una mezcla de hierbas nativas y tradicionales, en lotes pequeños para garantizar el máximo cuidado en todo el proceso.
-                    Su carácter no nace de atajos, sino de la honestidad en su elaboración. 
-                    <br>
-                    Su intensidad invita a disfrutarlo con calma. 
-                    <br>
-                    Porque después de todo, te merecés un vermut honesto.
-                    <br>
-                    Un vermut Arroyo Blanco.
-                </p>
-            </article>
-        </section>
+  </div>
+</section>
     </main>
 
     
@@ -107,5 +135,7 @@
     <a href="https://wa.me/5492945405859" class="boton-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
