@@ -8,7 +8,7 @@ posiciones,  */
 header {
     top: 0;
     left: 0;
-    height: 70px;
+    /* height: 70px; */
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
