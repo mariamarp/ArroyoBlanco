@@ -1,0 +1,75 @@
+@media (max-width: 992px) {
+  .galeria-pequena {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .galeria-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-pequena {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: $color-blanco;
+    border: 1px solid $color-gris;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+    ul {
+      flex-direction: column;
+    }
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 760px) {
+  .grilla-tienda {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recetas-grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .recetas-grilla {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 300px) {
+  .grilla-tienda {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: white;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+}
