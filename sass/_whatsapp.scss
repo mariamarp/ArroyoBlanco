@@ -1,0 +1,19 @@
+.boton-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: $color-principal;
+  padding: 12px;
+  border-radius: 100px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fab {
+  font-size: 1.5em;
+  margin-right: 10px;
+}

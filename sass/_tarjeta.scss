@@ -1,0 +1,19 @@
+.tarjeta {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    padding: auto;
+  }
+
+  p {
+    text-align: center;
+  }
+}
