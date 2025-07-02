@@ -1,5 +1,17 @@
-@use 'base/variables';
-@use 'components/header';
-@use 'components/footer';
-@use 'layout/media-queries';
-@use 'pages/home';
+@import 'variables';
+@import 'mixins';
+@import 'placeholders';
+
+@import 'header';
+@import 'footer';
+@import 'media-queries';
+
+@import 'home';
+@import 'tienda';
+@import 'galeria';
+@import 'recetas';
+
+@import 'banner';
+@import 'formulario';
+@import 'whatsapp';
+@import 'animation';

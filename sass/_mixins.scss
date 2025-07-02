@@ -1,0 +1,20 @@
+@mixin boton-estilo($bg-color, $text-color, $cursor: pointer, $hover: true) {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 10px;
+  cursor: $cursor;
+  background-color: $bg-color;
+  color: $text-color;
+  transition: 0.3s;
+
+  @if $hover {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

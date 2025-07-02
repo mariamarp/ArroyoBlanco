@@ -1,8 +1,8 @@
 footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: $color-blanco;
+  background-color: white;
   padding: 10px;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
