@@ -2,14 +2,17 @@
 @use 'mixins';
 @use 'placeholders';
 
+
 @use 'header';
 @use 'footer';
-@use 'home';
-@use 'novedades';
+// @use 'home';
 @use 'tienda';
-@use 'recetas';
+// @use 'novedades';
+// @use 'recetas';
 @use 'tarjeta';
-@use 'banner';
 @use 'formulario';
 @use 'whatsapp';
+
+
 @use 'media-queries';
+@use 'banner';

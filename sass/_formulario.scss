@@ -1,7 +1,8 @@
+@use 'utils';
 .contenedor {
   display: flex;
   flex-wrap: wrap;
-  background-color: $color-blanco;
+background: utils.$color-blanco;
   padding: 30px 50px 100px;
   gap: 40px;
   border-radius: 10px;

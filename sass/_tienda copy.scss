@@ -6,7 +6,7 @@
 @use 'header';
 @use 'footer';
 @use 'novedades';
-// @use 'recetas';
+@use 'recetas';
 @use 'tarjeta';
 @use 'banner';
 @use 'formulario';
@@ -41,13 +41,12 @@
 
 .card__boton {
   @extend %boton-base;
-color: utils.$color-secundario;
-@include utils.boton-estilo(utils.$color-principal, utils.$color-blanco);
+  @include  boton-estilo($color-principal, $color-blanco);
 }
 
 .card__boton--agotado {
   @extend %boton-base;
-@include utils.boton-estilo(#aaa, utils.$color-blanco, false);
+  @include  boton-estilo(#aaa, $color-blanco, false);
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.7;

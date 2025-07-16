@@ -1,3 +1,18 @@
+@use 'variables';
+@use 'mixins';
+@use 'placeholders';
+
+@use 'utils';
+@use 'header';
+@use 'footer';
+@use 'novedades';
+// @use 'recetas';
+@use 'tarjeta';
+@use 'banner';
+// @use 'formulario';
+@use 'whatsapp';
+@use 'media-queries';
+
 .recetas-grilla {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -8,7 +23,7 @@
 }
 
 .receta {
-  background: $color-blanco;
+background: utils.$color-blanco;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -26,7 +41,7 @@
 
   h2 {
     margin: 10px;
-    color: $color-secundario;
+    color: utils.$color-secundario;
     font-size: 20px;
   }
 

@@ -1,8 +1,9 @@
+@use 'utils';
 .boton-whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  color: $color-principal;
+  color: utils.$color-principal;
   padding: 12px;
   border-radius: 100px;
   font-size: 25px;
