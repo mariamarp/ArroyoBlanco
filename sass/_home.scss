@@ -1,15 +1,15 @@
-@import 'variables';
-@import 'mixins';
-@import 'placeholders';
+@use 'variables';
+@use 'mixins';
+@use 'placeholders';
 
-@import 'header';
-@import 'footer';
-@import 'media-queries';
-
-@import 'tienda';
-@import "novedades";
-@import 'recetas';
-
-@import 'banner';
-@import 'formulario';
-@import 'whatsapp';
+@use 'header';
+@use 'footer';
+// @use 'home';
+@use 'novedades';
+@use 'tienda';
+@use 'recetas';
+@use 'tarjeta';
+@use 'banner';
+@use 'formulario';
+@use 'whatsapp';
+@use 'media-queries';
