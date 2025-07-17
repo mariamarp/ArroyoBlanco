@@ -5,15 +5,34 @@
 @use 'utils';
 @use 'header';
 @use 'footer';
-// @use 'novedades';
-// @use 'recetas';
+@use 'novedades';
+@use 'recetas';
 @use 'tarjeta';
 @use 'banner';
-// @use 'formulario';
+@use 'formulario';
 @use 'whatsapp';
 @use 'media-queries';
 
-.recetas-grilla {
+@media (max-width: 760px) {
+  .grilla-recetas {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+ .grilla-recetas {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}
+
+.receta p {
+  font-size: 14px;
+}
+
+
+ .grilla-recetas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;

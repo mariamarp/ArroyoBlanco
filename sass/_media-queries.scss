@@ -1,21 +1,19 @@
-  .grilla-novedades {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-}
-
 @media (max-width: 760px) {
-  .grilla-novedades {
+  .grilla-tienda,
+  .grilla-novedades,
+  .grilla-recetas {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 450px) {
-  .grilla-novedades {
+@media (max-width: 300px) {
+  .grilla-tienda,
+  .grilla-novedades,
+  .grilla-recetas {
     grid-template-columns: 1fr;
   }
 }
+
   .menu-icon {
     display: block;
     position: absolute;
@@ -42,23 +40,5 @@
   #menu-toggle:checked + .menu-icon + .menu {
     display: block;
   }
-}
 
-@media (max-width: 760px) {
-  .grilla-tienda,
-  .recetas-grilla {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 450px) {
-  .recetas-grilla {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 300px) {
-  .grilla-tienda {
-    grid-template-columns: 1fr;
-  }
-}
