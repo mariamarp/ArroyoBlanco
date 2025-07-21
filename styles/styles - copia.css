@@ -10,6 +10,26 @@
   transition: 0.3s;
 }
 
+.card-hover-effect .card-body {
+  opacity: 0;
+  height: 160px;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-hover-effect:hover .card-body {
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-hover-effect:hover img {
+  height: auto;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
 @media (max-width: 760px) {
   .grilla-tienda,
   .grilla-novedades,
@@ -140,22 +160,6 @@ footer {
   text-align: center;
 }
 
-.card-hover-effect .card-body {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.card-hover-effect:hover .card-body {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card-hover-effect:hover img {
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
-}
-
 .banner {
   width: 100%;
 }
@@ -278,19 +282,17 @@ footer {
 }
 
 .titulo-tienda {
+  width: 100%;
   background-color: #082d26;
-  color: #fff;
-  padding: 30px 0;
+  color: white;
+  padding: 20px 0;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-optical-sizing: auto;
-  font-variation-settings: "wdth" 100;
-  font-style: normal;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  letter-spacing: 2px;
+  font-family: roboto;
+  font-size: 16px;
+  margin: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .grilla-novedades {
@@ -315,40 +317,29 @@ footer {
 .card-novedades {
   position: relative;
   text-align: center;
+  border: 1px solid #ccc;
   padding: 10px;
   background: #fff;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card-novedades:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+.card__titulo {
+  margin: 10px 0 5px;
+  font-size: 12px;
 }
-.card-novedades:hover .card__imagen {
-  transform: scale(1.05);
-}
-.card-novedades .card__imagen {
+
+.card__imagen {
   width: 100%;
-  height: 200px;
   object-fit: cover;
   display: block;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
 }
-.card-novedades .card__titulo {
-  font-size: 1.2rem;
-  margin: 15px 0 10px;
-  color: #082d26;
+
+.card__texto {
+  font-size: 10px;
+  color: #444;
 }
-.card-novedades .card__texto {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-.card-novedades .card__boton {
+
+.card__boton {
   display: inline-block;
   background-color: #082d26;
   color: #fff;
@@ -357,26 +348,9 @@ footer {
   text-decoration: none;
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
-  margin-top: 10px;
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
-.card-novedades .card__boton:hover {
+.card__boton:hover {
   background-color: rgb(0.3018867925, 1.6981132075, 1.4339622642);
-}
-
-.titulo-tienda {
-  background-color: #082d26;
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  letter-spacing: 2px;
 }
 
 .receta p {

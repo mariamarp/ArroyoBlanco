@@ -84,13 +84,17 @@ color: utils.$color-secundario;
 }
 
 .titulo-tienda {
-  background-color: variables.$color-principal;
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-  font-family: 'Roboto', sans-serif; 
-  font-size: 2.5rem; 
-  margin-bottom: 40px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  letter-spacing: 2px; 
+    background-color: variables.$color-principal;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-family: "Open Sans", sans-serif; 
+    font-weight: 700; 
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
 }
