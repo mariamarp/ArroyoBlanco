@@ -1,3 +1,10 @@
+// @media (max-width: 1200px) {
+//   .grilla-tienda,
+//   .grilla-recetas {
+//     grid-template-columns: repeat(3, 1fr);
+//   }
+// }
+
 @media (max-width: 760px) {
   .grilla-tienda,
   .grilla-novedades,
@@ -6,7 +13,7 @@
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 420px) {
   .grilla-tienda,
   .grilla-novedades,
   .grilla-recetas {

@@ -5,24 +5,41 @@
 @use 'utils';
 @use 'header';
 @use 'footer';
-@use 'novedades';
-@use 'recetas';
-@use 'tarjeta';
+@use 'home';
+// @use 'novedades';
+// @use 'recetas';
+// @use 'tarjeta';
 @use 'banner';
-@use 'formulario';
+// @use 'formulario';
 @use 'whatsapp';
 @use 'media-queries';
 
 .grilla-tienda {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.card {
+@media (max-width: 760px) {
+    .grilla-tienda,
+    .grilla-novedades,
+    .grilla-recetas {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 420px) {
+    .grilla-tienda,
+    .grilla-novedades,
+    .grilla-recetas {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.card-tienda {
     position: relative;
     text-align: center;
     border: 1px solid #ccc;
@@ -38,7 +55,7 @@
 }
 
 .card__boton {
-  @extend %boton-base;
+@extend %boton-base;
 color: utils.$color-secundario;
 @include utils.boton-estilo(utils.$color-principal, utils.$color-blanco);
 }
@@ -66,30 +83,14 @@ color: utils.$color-secundario;
     color: #444;
 }
 
-h1 {
-    width: 100%;
-    background-color: #082d26; 
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-family: roboto;
-    font-size: 16px;
-    margin: 0;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
 .titulo-tienda {
-    width: 100%;
-    background-color: #082d26; 
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-family: roboto;
-    font-size: 16px;
-    margin: 0;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: variables.$color-principal;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 2.5rem; 
+  margin-bottom: 40px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px; 
 }

@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'variables';
 @use 'mixins';
 @use 'placeholders';
@@ -5,65 +6,92 @@
 @use 'utils';
 @use 'header';
 @use 'footer';
-@use 'novedades';
-@use 'recetas';
-@use 'tarjeta';
+@use 'home';
+// @use 'novedades';
+// @use 'recetas';
+// @use 'tarjeta';
 @use 'banner';
-@use 'formulario';
+// @use 'formulario';
 @use 'whatsapp';
 @use 'media-queries';
 
 
 .grilla-novedades {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+   display: grid;
+    grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-@media (max-width: 992px) {
-  .grilla-novedades {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-@media (max-width: 576px) {
-  .grilla-novedades {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 760px) {
+    .grilla-novedades {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 420px) {
+    .grilla-novedades {
+        grid-template-columns: 1fr; 
+    }
 }
 .card-novedades {
-    position: relative;
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: #fff;
-    border-radius: 8px;
-}
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 
   &:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
   }
+}
 
 .card__titulo {
-    margin: 10px 0 5px;
-    font-size: 12px;
-}
+    font-size: 1.2rem; 
+    margin: 15px 0 10px; 
+    color: variables.$color-principal; 
+  }
 
-.card__imagen {
+  .card__imagen {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
 
-.card__texto {
-    font-size: 10px;
-    color: #444;
-}
 
-.card__boton {
-  @extend %boton-base;
-color: utils.$color-secundario;
-@include utils.boton-estilo(utils.$color-principal, utils.$color-blanco);
-}
+ .card__texto {
+    font-size: 0.95rem; 
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  .card__boton {
+    display: inline-block;
+    background-color: variables.$color-principal;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; // Asegura un buen espacio con el texto
+    width: 80%; // Que el botón no sea demasiado ancho, centrarlo
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover {
+    .card__imagen {
+      transform: scale(1.05); // La imagen se agranda un poco al pasar el mouse
+    }
+  }

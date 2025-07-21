@@ -1,8 +1,8 @@
-@use 'variables';
+@use 'variables' as *;
 @use 'mixins';
 @use 'placeholders';
 
-
+@use 'utils';
 @use 'header';
 @use 'footer';
 // @use 'home';
@@ -14,5 +14,6 @@
 @use 'whatsapp';
 
 
-@use 'media-queries';
+
 @use 'banner';
+@use 'media-queries';

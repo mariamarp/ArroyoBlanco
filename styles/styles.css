@@ -10,6 +10,66 @@
   transition: 0.3s;
 }
 
+.card-hover-effect .card-body {
+  opacity: 0;
+  height: 160px;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-hover-effect:hover .card-body {
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-hover-effect:hover img {
+  height: auto;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 760px) {
+  .grilla-tienda,
+  .grilla-novedades,
+  .grilla-recetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  .grilla-tienda,
+  .grilla-novedades,
+  .grilla-recetas {
+    grid-template-columns: 1fr;
+  }
+}
+.menu-icon {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.menu ul {
+  flex-direction: column;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+  display: block;
+}
+
 header {
   top: 0;
   left: 0;
@@ -82,67 +142,6 @@ footer {
   text-align: right;
 }
 
-.grilla-tienda {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 10px;
-}
-@media (min-width: 576px) {
-  .grilla-tienda {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 992px) {
-  .grilla-tienda {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.03);
-}
-.card__titulo {
-  font-size: 18px;
-  margin: 10px 0;
-  font-weight: bold;
-  color: #333;
-}
-.card__imagen {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-.card__texto {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
-}
-.card__boton {
-  display: inline-block;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-.card__boton:hover {
-  background-color: #555;
-}
-
 .tarjeta {
   flex: 1 1 250px;
   max-width: 300px;
@@ -171,39 +170,6 @@ footer {
   display: block;
 }
 
-.contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  background: #fff;
-  padding: 30px 50px 100px;
-  gap: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  align-items: center;
-}
-
-.formulario {
-  flex: 1 1 300px;
-}
-.formulario form {
-  display: flex;
-  flex-direction: column;
-}
-.formulario form label {
-  margin-top: 10px;
-  font-weight: bold;
-}
-.formulario form input, .formulario form select {
-  margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.mapa {
-  flex: 1 1 400px;
-}
-
 .boton-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -224,70 +190,6 @@ footer {
   margin-right: 10px;
 }
 
-@media (max-width: 992px) {
-  .galeria-pequena {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .galeria-contenedor {
-    grid-template-columns: 1fr;
-  }
-  .galeria-pequena {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .menu-icon {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
-  .menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: white;
-    border: 1px solid gray;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-  }
-  .menu ul {
-    flex-direction: column;
-  }
-  #menu-toggle:checked + .menu-icon + .menu {
-    display: block;
-  }
-}
-@media (max-width: 760px) {
-  .grilla-tienda {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .recetas-grilla {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 450px) {
-  .recetas-grilla {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (max-width: 300px) {
-  .grilla-tienda {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (max-width: 992px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    background: white;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-}
 .grilla-tienda {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -297,7 +199,21 @@ footer {
   padding: 20px;
 }
 
-.card {
+@media (max-width: 760px) {
+  .grilla-tienda,
+  .grilla-novedades,
+  .grilla-recetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  .grilla-tienda,
+  .grilla-novedades,
+  .grilla-recetas {
+    grid-template-columns: 1fr;
+  }
+}
+.card-tienda {
   position: relative;
   text-align: center;
   border: 1px solid #ccc;
@@ -365,7 +281,7 @@ footer {
   color: #444;
 }
 
-h1 {
+.titulo-tienda {
   width: 100%;
   background-color: #082d26;
   color: white;
@@ -379,18 +295,135 @@ h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.titulo-tienda {
-  width: 100%;
-  background-color: #082d26;
-  color: white;
-  padding: 20px 0;
+.grilla-novedades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 760px) {
+  .grilla-novedades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  .grilla-novedades {
+    grid-template-columns: 1fr;
+  }
+}
+.card-novedades {
+  position: relative;
   text-align: center;
-  font-family: roboto;
-  font-size: 16px;
-  margin: 0;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.card__titulo {
+  margin: 10px 0 5px;
+  font-size: 12px;
+}
+
+.card__imagen {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__texto {
+  font-size: 10px;
+  color: #444;
+}
+
+.card__boton {
+  display: inline-block;
+  background-color: #082d26;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+.card__boton:hover {
+  background-color: rgb(0.3018867925, 1.6981132075, 1.4339622642);
+}
+
+.receta p {
+  font-size: 14px;
+}
+
+.grilla-recetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.receta {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.receta:hover {
+  transform: scale(1.02);
+}
+.receta img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.receta h2 {
+  margin: 10px;
+  color: #8b0000;
+  font-size: 20px;
+}
+.receta p {
+  margin: 0 15px 20px;
+  font-size: 10px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 30px 50px 100px;
+  gap: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.formulario {
+  flex: 1 1 300px;
+}
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+.formulario form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.formulario form input, .formulario form select {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.mapa {
+  flex: 1 1 400px;
 }
 
 /*# sourceMappingURL=styles.css.map */
