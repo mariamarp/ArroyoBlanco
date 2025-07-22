@@ -1,4 +1,4 @@
-.card__boton, .card__boton--agotado {
+.card__boton, .card__boton--agotado, header .navbar .navbar-nav .nav-item .btn {
   display: block;
   width: 100%;
   border: none;
@@ -36,7 +36,6 @@
   position: absolute;
   top: 70px;
   right: 20px;
-  background-color: white;
   border: 1px solid gray;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -51,33 +50,122 @@
 }
 
 header {
+  width: 100%;
   top: 0;
   left: 0;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   z-index: 1000;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
-
-.logo {
-  height: 50px;
+header .logo {
+  height: 60px;
+  width: auto;
 }
-
-.nav-link {
-  font-family: roboto;
+header .navbar {
+  background-color: transparent !important;
+  width: auto;
+}
+header .navbar .container-fluid {
+  padding: 0;
+}
+header .navbar .navbar-toggler {
+  border: 1px solid #082d26;
+}
+header .navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+header .navbar .navbar-nav .nav-item .btn {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: transparent;
   color: black;
+  transition: 0.3s;
+  border: 1px solid black;
+  margin: 0 20px;
+  transition: all 0.3s ease;
 }
-.nav-link:hover {
-  background-color: #FFF;
-  border-radius: 4px;
+header .navbar .navbar-nav .nav-item .btn:hover {
+  opacity: 1;
 }
-
-.navbar-toggler {
-  border: 1px solid #333;
+header .navbar .navbar-nav .nav-item .btn:hover {
+  background-color: #082d26;
+  color: white;
+  border-color: #082d26;
+}
+header .navbar .navbar-nav .nav-link {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  padding: 0.5rem 1rem;
+}
+header .navbar .navbar-nav .nav-link:hover {
+  background-color: transparent;
+  color: #082d26;
+}
+@media (max-width: 991.98px) {
+  header {
+    padding: 5px 15px;
+  }
+  header .logo {
+    height: 50px;
+  }
+  header .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: -100px;
+    width: 120px;
+    margin: 0 20px;
+    background-color: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid #eee;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    z-index: 999;
+  }
+  header .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .navbar-nav .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+  header .navbar-nav .btn {
+    width: 85%;
+    max-width: 250px;
+    display: block;
+    margin: 5px auto;
+    font-size: 1rem;
+    padding: 10px 15px;
+    background-color: #082d26;
+    color: white;
+    border-color: #082d26;
+  }
+  header .navbar-nav .btn:hover {
+    background-color: #082d26, 10%;
+    color: white;
+  }
+  header .navbar-nav .nav-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: black;
+  }
+  header .navbar-nav .nav-link:hover {
+    background-color: #082d26;
+    color: white;
+  }
 }
 
 footer {
@@ -283,7 +371,6 @@ footer {
 .card-tienda {
   position: relative;
   text-align: center;
-  border: 1px solid #ccc;
   padding: 10px;
   background: #fff;
   border-radius: 8px;

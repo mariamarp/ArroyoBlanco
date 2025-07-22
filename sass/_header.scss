@@ -1,33 +1,127 @@
 @use 'variables';
+@use 'mixins'; 
+@use 'placeholders'; 
 
 header {
-  // position: relative;
-  top: 0;
-  left: 0;
-  // height: 70px;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  font-family: roboto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
+    width: 100%;
+    // position: absolute; 
+    top: 0;
+    left: 0;
+    background-color: transparent; 
+    z-index: 1000;
+    font-family: 'Roboto', sans-serif; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; 
+    box-sizing: border-box; 
 
-.logo {
-  height: 50px;
-}
+    .logo {
+        height: 60px; 
+        width: auto;
+    }
 
-.nav-link {
-  font-family: roboto;
-  color: black;
+    .navbar {
+        background-color: transparent !important; 
+        width: auto; 
 
-  &:hover {
-    background-color: #FFF;
-    border-radius: 4px;
-  }
-}
-.navbar-toggler {
-  border: 1px solid #333;
+        .container-fluid {
+            padding: 0; 
+        }
+
+        .navbar-toggler {
+            border: 1px solid variables.$color-principal; 
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                .btn { 
+                    @extend %boton-base;
+                    @include mixins.boton-estilo(transparent, black); 
+                    border: 1px solid black; 
+                    margin: 0 20px; 
+                    transition: all 0.3s ease; 
+                    
+                    &:hover {
+                        background-color: variables.$color-principal; 
+                        color: white; 
+                        border-color: variables.$color-principal;
+                    }
+                }
+            }
+            .nav-link {
+                font-family: 'Roboto', sans-serif;
+                color: black;
+                padding: .5rem 1rem; 
+                
+                &:hover {
+                    background-color: transparent; 
+                    color: variables.$color-principal; 
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        padding: 5px 15px;
+
+        .logo {
+            height: 50px;
+        }
+
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: -100px;
+            width: 120px;
+            margin: 0 20px;
+            background-color: rgba(255, 255, 255, 0.98); 
+            border-top: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0; 
+            z-index: 999; 
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: center; 
+
+            .nav-item {
+                width: 100%;
+                text-align: center; 
+                margin: 5px 0; 
+            }
+
+            .btn {
+                width: 85%; 
+                max-width: 250px; 
+                display: block; 
+                margin: 5px auto;
+                font-size: 1rem;
+                padding: 10px 15px; 
+                background-color: variables.$color-principal; 
+                color: white;
+                border-color: variables.$color-principal;
+
+                &:hover {
+                 background-color: (variables.$color-principal, 10%); // Use 'color.' prefix
+                    color: white;
+                }
+            }
+
+            .nav-link { 
+                display: block; 
+                padding: 10px 0; 
+                font-size: 1rem;
+                color: black; 
+                &:hover {
+                    background-color: variables.$color-principal;
+                    color: white;
+                }
+            }
+        }
+    }
 }
